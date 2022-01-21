@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Pacifico&family=Poppins:wght@100;200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dongle', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    height: 100vh;
+    background-color: coral;
+}
+
+.container{
+    position: relative;
+}
+.container .navigation{     
+    width: 80px;
+    height: 420px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0,0,.3);
+    overflow: hidden;    
+    transition: .5s;
+}
+.container .navigation.active{
+    width: 300px;
+}
+.container .navigation ul li{
+    transition: .2s;
+}
+.container .navigation ul li:hover{
+    background-color: rgb(241, 239, 239);
+}
+
+.container .navigation ul li a{
+    text-decoration: none;
+    color: coral;
+    font-size: 28px;
+    font-weight: 550;
+    display: flex;
+}
+
+.container .navigation ul li a .icon{
+    min-width: 80px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.container .navigation ul li a .title{    
+    height: 60px;
+    line-height: 60px;    
+}
+.container .toggle{
+    position: absolute;
+    right: -20px;
+    top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(248, 245, 245);
+    border: 5px solid coral;
+}
+.container .toggle::before{
+    position: absolute;
+    content: '\f054';
+    font-family: fontawesome;
+    font-size: 20px;
+    top: 15%;
+    left: 25%;
+    color: coral;
+}
+
+.container .toggle.active::before{
+    content: '\f053';
+}
+
+
+
